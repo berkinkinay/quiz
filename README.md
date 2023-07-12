@@ -1,4 +1,4 @@
-# 3D Objects 💻
+# Quiz Application 💻
 `This is a quiz app. You can edit and create your test like what is going to about.`
 
 ## Used Techs 🥰
