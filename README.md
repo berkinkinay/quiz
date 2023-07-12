@@ -11,7 +11,7 @@
 
 ## Project Link 🔭
 
-`See the project what it looks like` => [Demo](https://3d-objects-sage.vercel.app/)
+`See the project what it looks like` => [Demo](https://quizcreater.netlify.app/)
 
 ## `Developer Side (Upcoming features)`💫
 This is for now... `I will add landing animation to some objects on the pages.`
