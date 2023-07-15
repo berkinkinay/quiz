@@ -101,5 +101,3 @@ const Questions = () => {
   )
 }
 export default Questions;
-
-// 1.10:32
