@@ -27,6 +27,4 @@ const AppView = () => {
     </>
   )
 }
-export default AppView
-
-//32.20
+export default AppView;
