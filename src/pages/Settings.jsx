@@ -5,7 +5,6 @@ import { Button, CircularProgress, Typography } from '@mui/material'
 import TextFieldComp from '../components/TextFieldComp'
 import useAxios from '../hooks/useAxios'
 import { useNavigate } from 'react-router-dom'
-//import { createTheme } from '@mui/material/styles';
 
 const Settings = (props) => {
   const { response, error, loading } = useAxios ({ url: '/api_category.php'});
@@ -13,7 +12,7 @@ const Settings = (props) => {
 
   if(loading) {
     return (
-      <div className='mt-36'>
+      <div className='lg:mt-80 2xl:mt-0 flex items-center justify-center'>
           <CircularProgress color="secondary" />
       </div>
     )
@@ -45,7 +44,7 @@ const Settings = (props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='flex flex-col items-center gap-5 w-72 h-24'>
+    <form onSubmit={handleSubmit} class='flex flex-col items-center gap-5 2xl:w-96 xs:w-full lg:w-full md:w-full h-auto'>
         <SelectField label="Category" options={response.trivia_categories}/>
         <SelectField label="Difficulty" options={difficultyOptions} />
         <SelectField label="Type" options={typeOptions} />
@@ -53,30 +52,11 @@ const Settings = (props) => {
           <TextFieldComp /> 
         </div>
         <div className='mt-5'> 
-          <button className='bn' onClick={()=>{navigate('/questions')}} fullWidth variant='contained' type='submit'>
+          <button class='bn' onClick={()=>{navigate('/questions')}} fullWidth variant='contained' type='submit'>
               Get Started
           </button>
         </div>
     </form>
   )
 }
-export default Settings
-
-
-// 55.33
-//useNavigate
-/*
-const theme = createTheme({
-  palette: {
-    primary: {
-      dark: '#02040a',
-    },
-    secondary: {
-      light: '#ff7961',
-      main: '#f44336',
-      dark: '#ba000d',
-      contrastText: '#000',
-    },
-  },
-});
-*/
+export default Settings;
