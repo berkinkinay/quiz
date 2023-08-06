@@ -4,7 +4,7 @@
 
 @layer components {
   .app-view {
-    @apply flex flex-col w-full items-center justify-center h-screen bg-gradient-to-b from-gray-700 via-purple-100 to-violet-200
+    @apply flex flex-col w-full items-center justify-center h-screen bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600
   }
   .box {
     @apply flex flex-col w-full items-center h-screen
