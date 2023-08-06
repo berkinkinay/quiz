@@ -2,7 +2,6 @@ import React, {useEffect, useState } from 'react'
 import { decode } from "html-entities";
 import { useNavigate } from 'react-router'
 import { CircularProgress } from '@mui/material'
-import { Box } from '@mui/system'
 import useAxios from '../hooks/useAxios'
 import { useSelector, useDispatch } from 'react-redux'
 import { handleScoreChange } from '../redux/actions'
@@ -53,9 +52,9 @@ const Questions = () => {
 
   if(loading) {
     return(
-      <Box mt={20}>
+      <div class='lg:mt-80 2xl:mt-0 flex items-center justify-center'>
           <CircularProgress color="secondary" />
-      </Box>
+      </div>
     )
   };
 
@@ -73,31 +72,34 @@ const Questions = () => {
   };
 
   return (
-    <div className='flex bg-slate-800 drop-shadow-2xl m-5 p-10 rounded-lg gap-4 flex-col w-[600px] h-fit items-center text-white'>
-      <Box>
-        <div className='flex items-center justify-center w-full h-fit text-2xl'>Questions {questionIndex + 1}</div>
-        <div className='flex items-center justify-center w-full h-16 text-base text-slate-300 text-center'>
-          {decode(response.results[questionIndex].question)}
-        </div>
-        <div className='flex flex-col-1 gap-5 w-full h-fit items-center justify-center'>
-          {options.map((data, id) => (
-            <div className='flex mt-5 flex-col text-base text-center
-                            items-center justify-center'  key={id}>
-              <button 
-                className='Button' 
-                onClick={handleClickAnswer}
-                >
-                {decode(data)}
-              </button>
+    <div class='flex h-full items-center justify-center'>
+      <div class='flex p-10 rounded-lg w-full h-[500px] items-center justify-center'>
+        <div class='flex flex-col items-center justify-center w-full h-auto gap-5'>
+            <div class='flex items-center justify-center w-full h-fit text-2xl text-gray-800'>Question {questionIndex + 1}</div>
+            <div class='flex items-center justify-center w-full h-56 2xl:text-xl text-gray-700 text-center'>
+              {decode(response.results[questionIndex].question)}
             </div>
-          ))}
-         </div>
-        <div className='flex items-center justify-center text-base mt-4'>
-          Score: {score} / {response.results.length}
+            <div class='grid grid-cols-2 text-center gap-5 w-full h-full items-center justify-center'>
+              {options.map((data, id) => (
+                <div class='flex w-full h-full flex-cols-2 text-base text-center
+                            items-center justify-center'  
+                    key={id}>
+                  <button 
+                    class='flex flex-row w-full h-auto text-center items-center justify-center bg-purple-500 hover:bg-white text-white
+                          hover:text-black rounded-xl hover:delay-100' 
+                    onClick={handleClickAnswer}
+                    >
+                      {decode(data)}
+                  </button>
+                </div>
+              ))}
+            </div>
+            <div class='flex items-center justify-center text-base mt-4'>
+              Score: {score} / {response.results.length}
+            </div>
         </div>
-      </Box>
+      </div>
     </div>
-
   )
 }
 export default Questions;
