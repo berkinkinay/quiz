@@ -7,12 +7,17 @@ const AppView = () => {
     <> 
       <div className='app-view'>
         <div className='box'>
-          <a 
+          <div
             className='header'
-            href='/'
               >
-                Quiz App
-          </a>
+                <a 
+                  class='font-extrabold underline decoration-1
+                        text-purple-700 text-2xl hover:text-white' 
+                  href='/'
+                  >
+                     Quiz App
+                </a>
+          </div>
             <div className='body'>
               <PageRouter />
             </div>
