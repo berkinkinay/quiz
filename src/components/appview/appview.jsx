@@ -1,14 +1,18 @@
 import React from 'react'
 import './styles.css'
 import PageRouter from '../PageRouter'
-import { Typewriter } from 'react-simple-typewriter'
 
 const AppView = () => {
   return (
     <> 
       <div className='app-view'>
         <div className='box'>
-          <div className='header'>Quiz App</div>
+          <a 
+            className='header'
+            href='/'
+              >
+                Quiz App
+          </a>
             <div className='body'>
               <h1 className='title'>
                
@@ -20,7 +24,7 @@ const AppView = () => {
               rel='noreferrer'
               target='_blank'
               className='flex w-fit h-fit hover:text-purple-300' 
-              href='https://github.com/berkinkinay'> coded by Berkin Kınay </a>
+              href='https://berkinkinay.dev/'> coded by Berkin Kınay </a>
           </div>
         </div>
       </div>
