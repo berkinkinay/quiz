@@ -14,7 +14,7 @@
 `See the project what it looks like` => [Demo]([https://quizcreater.netlify.app/](https://main--quizcreatorr.netlify.app/))
 
 ## `Developer Side (Upcoming features)`💫
-This is for now... `I will add landing animation to some objects on the pages.`
+This is for now... `I will add some animations and redesign user interface.`
 
 ### `dev`
 Berkin Kınay 👨‍💻
