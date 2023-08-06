@@ -14,9 +14,6 @@ const AppView = () => {
                 Quiz App
           </a>
             <div className='body'>
-              <h1 className='title'>
-               
-              </h1>
               <PageRouter />
             </div>
           <div className='footer'>
