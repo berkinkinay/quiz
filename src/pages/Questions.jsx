@@ -5,6 +5,7 @@ import { CircularProgress } from '@mui/material'
 import useAxios from '../hooks/useAxios'
 import { useSelector, useDispatch } from 'react-redux'
 import { handleScoreChange } from '../redux/actions'
+import { motion } from "framer-motion";
 
 const getRandomInt = (max) => {
   return Math.floor(Math.random() * Math.floor(max));
@@ -71,6 +72,26 @@ const Questions = () => {
     }
   };
 
+  const container = {
+    hidden: { opacity: 1, scale: 0.9 },
+    visible: {
+      opacity: 1.5,
+      scale: 1,
+      transition: {
+        delayChildren: 1,
+        staggerChildren: 1
+      }
+    }
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
+
   return (
     <div class='flex h-full items-center justify-center'>
       <div class='flex p-10 rounded-lg w-full h-[500px] items-center justify-center'>
@@ -83,14 +104,27 @@ const Questions = () => {
               {options.map((data, id) => (
                 <div class='flex w-full h-full flex-cols-2 text-base text-center
                             items-center justify-center'  
-                    key={id}>
-                  <button 
-                    class='flex flex-row w-full h-auto text-center items-center justify-center bg-purple-500 hover:bg-white text-white
-                          hover:text-black rounded-xl hover:delay-100' 
-                    onClick={handleClickAnswer}
-                    >
-                      {decode(data)}
-                  </button>
+                     key={id}
+                >
+                 <motion.ul
+                    className='container'
+                    variant={container}
+                    initial='hidden'
+                    animate='visible'
+                 > 
+                  {[0].map((index) => (
+                          <motion.li key={index} className="item" variants={item}> 
+                    <button 
+                      class='flex flex-row w-full h-auto text-center items-center justify-center bg-purple-500 hover:bg-white text-white
+                            hover:text-black rounded-xl hover:delay-100' 
+                      onClick={handleClickAnswer}
+                      >
+                            {decode(data)}
+            
+                    </button>
+                    </motion.li>
+                        ))} 
+                </motion.ul>
                 </div>
               ))}
             </div>
