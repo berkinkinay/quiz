@@ -23,3 +23,5 @@
     @apply grid m-10 place-items-center text-center w-fit h-fit font-semibold text-black
   }
 }
+
+/*bg-gradient-to-b from-gray-700 via-purple-100 to-violet-200*/
