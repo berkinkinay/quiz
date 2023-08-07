@@ -1,4 +1,4 @@
-# quiz 💻💫
+# quiz app 💻💫
 `This is a quiz application. You can create your quiz from your choices.`
 
 ## Used Techs 🥰
