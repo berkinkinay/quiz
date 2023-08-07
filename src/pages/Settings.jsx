@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from '@mui/system'
+import { motion } from 'framer-motion'
 import SelectField from '../components/SelectField'
 import { Button, CircularProgress, Typography } from '@mui/material'
 import TextFieldComp from '../components/TextFieldComp'
@@ -52,9 +52,15 @@ const Settings = (props) => {
           <TextFieldComp /> 
         </div>
         <div className='mt-5'> 
-          <button class='bn' onClick={()=>{navigate('/questions')}} fullWidth variant='contained' type='submit'>
-              Get Started
-          </button>
+        <motion.div
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 100, damping: 10 }}
+            whileTap={{ scale: 1 }}
+          >
+            <button class='bn' onClick={()=>{navigate('/questions')}} fullWidth variant='contained' type='submit'>
+                Get Started
+            </button>
+          </motion.div>
         </div>
     </form>
   )
