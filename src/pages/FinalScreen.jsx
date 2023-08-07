@@ -21,7 +21,7 @@ const FinalScreen = () => {
           Final Score  {score}
         </h1>
         <text class='flex text-base font-semibold text-slate-700'> 
-          Click the button back to question settings page, create and start the new test!
+          Click the button to return to the question settings page, create and start the new test!        
         </text>
         <button class='bn632-hover bn24' onClick={handleBackToSettings} variant='outlined'>
             <BsFillCaretLeftFill class='flex w-full items-center hover:text-black' size='1.5rem' />
