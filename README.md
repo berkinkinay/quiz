@@ -1,9 +1,9 @@
 # quiz 💻💫
-`This is my portfolio website.`
+`This is a quiz application. You can create your quiz from your choices.`
 
 ## Used Techs 🥰
 
-### `TypeScript`
+### `JavaScript`
 ### `ReactJs`
 ### `Vite`
 ### `Framer Motion`
