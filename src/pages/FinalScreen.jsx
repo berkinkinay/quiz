@@ -20,7 +20,7 @@ const FinalScreen = () => {
         <motion.div
           animate={{ x: 20 }}
           transition={{ ease: "easeOut", duration: 0.6 }}
-          class='flex flex-col items-center justify-center mr-16 border-b-2 border-purple-500 drop-shadow-2xl rounded-lg'
+          class='flex flex-col items-center justify-center mr-16 border-b-2 border-purple-200 drop-shadow-2xl rounded-lg'
         > 
           <h1 class='flex text-base font-bold text-slate-900'> 
             Final Score  {score}
